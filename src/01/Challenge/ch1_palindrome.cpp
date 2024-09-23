@@ -15,8 +15,13 @@
 bool is_palindrome(std::string str){
 
     // Write your code here
-
-    return false;
+    int length;
+    bool result=true;
+    length = str.size();
+    for (int i=0; i< (str.size()/2); i++) {
+        if( str[i] != str[(length-1) -i]) return (result=false);
+    }
+    return result;
 }
 
 // Main function
